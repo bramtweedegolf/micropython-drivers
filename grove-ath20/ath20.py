@@ -61,7 +61,7 @@ class ATH20:
       return (value / pow(2, 20)) * 200 - 50
 
   # Take a measurement
-  def measure(self):
+  def read(self):
 
     if not self.isCalibrated():
       self.calibrate()
@@ -81,8 +81,8 @@ class ATH20:
     return i2c.readfrom(DEV_ADDRESS, 6)
 
   # Attempt to read temp and humidity
-  def read(self):
-    results = self.measure()
+  def measure(self):
+    results = self.read()
 
     # Collect the humidity bits
     hum = ""
@@ -99,6 +99,4 @@ class ATH20:
     hum = self.calculateHumidity(int(hum, 2))
     temp = self.calculateTemperature(int(temp, 2))
 
-    print(hum, temp)
     return (hum, temp)
-

@@ -1,5 +1,5 @@
 #
-# http://docs.micropython.org/en/v1.9.3/esp8266/esp8266/quickref.html#onewire-driver
+# This example is taken from: http://docs.micropython.org/en/v1.9.3/esp8266/esp8266/quickref.html#onewire-driver
 #
 
 import time, ds18x20
