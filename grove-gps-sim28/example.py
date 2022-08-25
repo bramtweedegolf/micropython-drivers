@@ -1,7 +1,8 @@
 #
 # Grove GPS (Sim 28)
 #
-# https://docs.micropython.org
+# Written for Micropython: https://docs.micropython.org
+# Based on the examples on https://wiki.seeedstudio.com/Grove-GPS/
 #
 
 from pyb import UART
